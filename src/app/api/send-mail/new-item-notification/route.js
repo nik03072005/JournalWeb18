@@ -125,7 +125,7 @@ export async function POST(req) {
           .replace(/{{_id}}/g, itemDetails._id || '');
 
         const mailOptions = {
-          from: `"Digital Library - Geetanagar College" <${process.env.SMTP_EMAIL}>`,
+          from: `"Digital Library - Kanya Mahavidyalaya" <${process.env.SMTP_EMAIL}>`,
           to: user.email,
           subject: `New ${itemDetails.type || 'Item'} Added to Digital Library - ${itemDetails.title || 'Check it out!'}`,
           html: personalizedTemplate,

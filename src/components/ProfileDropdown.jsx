@@ -37,20 +37,22 @@ const ProfileDropdown = ({ onLogout }) => {
         <div className="relative" ref={dropdownRef}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className=""
+                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
                 title="Profile Menu"
             >
                 {/* Profile Avatar */}
-            
+                <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-medium text-sm shadow-md">
+                    {getInitials(user?.firstName || 'User')}
+                </div>
                 
                 {/* Desktop: Show name and chevron */}
                 <div className="hidden md:flex items-center gap-1">
-                    <span className="text-sm font-medium text-white">
+                    <span className="text-sm font-medium text-gray-700">
                         {user?.firstName ? user.firstName : 'User'}
                     </span>
                     <ChevronDown 
                         size={16} 
-                        className={`transition-transform text-white ${isOpen ? 'rotate-180' : ''}`} 
+                        className={`transition-transform text-gray-700 ${isOpen ? 'rotate-180' : ''}`} 
                     />
                 </div>
             </button>

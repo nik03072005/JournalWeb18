@@ -99,7 +99,7 @@ export async function POST(req) {
     });
 
     const mailOptions = {
-      from: `"Digital Library -  Geetanagar College" <${process.env.SMTP_EMAIL}>`,
+      from: `"Digital Library -  Kanya Mahavidyalaya" <${process.env.SMTP_EMAIL}>`,
       to: email,
       subject: `Email Verification for Digital Library - Welcome ${userName}!`,
       html: htmlTemplate,

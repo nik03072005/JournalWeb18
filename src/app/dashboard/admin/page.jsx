@@ -348,7 +348,7 @@ export default function AdminDashboard() {
         <div className="mb-6 lg:mb-8">
           <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">Admin Dashboard</h1>
           <p className="mt-2 text-sm lg:text-base text-gray-600">
-            Digital Library of Geetanagar College - Administrative Overview
+            Digital Library of Kanya Mahavidyalaya - Administrative Overview
           </p>
         </div>
 

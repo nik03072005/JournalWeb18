@@ -32,7 +32,7 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-                <h3 className="text-lg lg:text-xl font-bold text-white mb-3 lg:mb-4">Geetanagar College</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-white mb-3 lg:mb-4">Kanya Mahavidyalaya</h3>
               </div>
               <p className="text-gray-300 leading-relaxed text-sm lg:text-base">
                 Empowering minds through technology. Access the world's largest collection of academic resources, research papers, and digital archives. Join millions of researchers, students, and educators in the pursuit of knowledge.
@@ -89,7 +89,7 @@ const Footer = () => {
                   </div>
                   <div className="text-center sm:text-left">
                     <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
-                      Geetanagar College, Geetanagar, Guwahati-21, Assam
+                      Kanya Mahavidyalaya, Geetanagar, Guwahati-21, Assam
                     </p>
                   </div>
                 </li>
@@ -131,7 +131,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-3 lg:gap-4 text-center md:text-left">
               <div>
                 <p className="text-gray-300 text-xs lg:text-sm">
-                  © 2025 All Rights Reserved - Geetanagar College 
+                  © 2025 All Rights Reserved - Kanya Mahavidyalaya 
                 </p>
               </div>
               <div className="flex items-center gap-2 lg:gap-3">

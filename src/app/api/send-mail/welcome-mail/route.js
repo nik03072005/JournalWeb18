@@ -56,9 +56,9 @@ export async function POST(req) {
     });
 
     const mailOptions = {
-      from: `"Digital Library - Geetanagar College 🎓" <${process.env.SMTP_EMAIL}>`,
+      from: `"Digital Library - Kanya Mahavidyalaya 🎓" <${process.env.SMTP_EMAIL}>`,
       to: email,
-      subject: 'Welcome to Digital Library - Geetanagar College',
+      subject: 'Welcome to Digital Library - Kanya Mahavidyalaya',
       html: htmlTemplate,
     };
 

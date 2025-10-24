@@ -10,7 +10,7 @@ const philosopher = Philosopher({
 });
 
 export const metadata = {
-  title: "Digital Library - Geetanagar College",
+  title: "Digital Library - Kanya Mahavidyalaya",
   description: " Discover a vast collection of eBooks, journals, research papers & more. Access knowledge anytime, anywhere with our Digital Library",
 };
 export default function RootLayout({ children }) {
