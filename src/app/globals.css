@@ -57,20 +57,23 @@ body {
   opacity: 0;
 }
 
-/* Enhanced scrollbar for webkit browsers */
-::-webkit-scrollbar {
-  width: 8px;
+/* Hide scrollbar for all browsers */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #06b6d4, #0891b2);
-  border-radius: 4px;
+/* Alternative: Keep scrollbar for body but hide it */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #0891b2, #0e7490);
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
