@@ -130,18 +130,25 @@ export default function Home() {
 
         {/* Hero Section */}
         <div className="relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-20">
             {/* Two Column Layout */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
               
               {/* Left Column - Text Content */}
-              <div className="space-y-6">
-                {/* Decorative dots pattern */}
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, row) => (
-                    <div key={row} className="flex flex-col gap-1">
-                      {[...Array(5)].map((_, col) => (
-                        <div key={col} className="w-1 h-1 bg-white/40 rounded-full"></div>
+              <div className="space-y-8">
+                {/* Decorative dots pattern - Enhanced Rectangle */}
+                <div className="flex gap-2.5 mb-4 w-fit">
+                  {[...Array(12)].map((_, col) => (
+                    <div key={col} className="flex flex-col gap-1.5">
+                      {[...Array(7)].map((_, row) => (
+                        <div 
+                          key={row} 
+                          className="w-0.75 h-0.75 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full shadow-sm hover:scale-125 transition-transform duration-300"
+                          style={{
+                            opacity: 0.5 + (col * 0.025),
+                            animationDelay: `${(col + row) * 0.1}s`
+                          }}
+                        ></div>
                       ))}
                     </div>
                   ))}
@@ -153,18 +160,18 @@ export default function Home() {
                 </h1>
 
                 {/* Subtitle/Description */}
-                <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
+                <p className="text-gray-600 text-lg sm:text-xl leading-relaxed max-w-xl">
                   Access thousands of books, journals, and research papers anytime, anywhere. Your gateway to knowledge starts here.
                 </p>
 
                 {/* Search Box Label */}
-                <div className="pt-4">
-                  <h2 className="text-gray-900 text-xl font-semibold mb-4">
+                <div className="pt-2">
+                  {/* <h2 className="text-gray-900 text-xl font-semibold mb-4">
                     Add Search BOX
-                  </h2>
+                  </h2> */}
 
                   {/* Search Input */}
-                  <div className="flex gap-2 mb-6">
+                  <div className="flex flex-col sm:flex-row gap-3 mb-6">
                     <input
                       type="text"
                       placeholder="Search Books, Articles, Research Papers..."
@@ -175,24 +182,25 @@ export default function Home() {
                           handleSearch();
                         }
                       }}
-                      className="flex-1 px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
+                      className="flex-1 px-5 py-3.5 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm placeholder:text-gray-400"
                       aria-label="Search for academic resources"
                     />
                     <button
                       onClick={handleSearch}
-                      className={`bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 flex items-center gap-2 ${
+                      className={`bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3.5 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg ${
                         !searchTerm.trim() ? 'opacity-60 cursor-not-allowed' : ''
                       }`}
                       disabled={!searchTerm.trim()}
                       aria-label="Submit search"
                     >
                       <Search className="w-5 h-5" />
+                      <span className="hidden sm:inline">Search</span>
                     </button>
                   </div>
 
                   {/* Advance Search Button */}
                   <Link href="/advanceSearch">
-                    <button className="bg-gradient-to-r from-red-800 to-red-900 hover:from-red-900 hover:to-red-950 text-white font-semibold px-8 py-3 rounded-sm transition-all duration-200 shadow-lg hover:shadow-xl">
+                    <button className="bg-gradient-to-r from-red-800 to-red-900 hover:from-red-900 hover:to-red-950 text-white font-semibold px-10 py-3.5 rounded-sm transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
                       ADVANCE SEARCH
                     </button>
                   </Link>
@@ -200,20 +208,20 @@ export default function Home() {
               </div>
 
               {/* Right Column - Illustration */}
-              <div className="relative hidden lg:block">
-                <div className="relative">
+              <div className="relative hidden lg:flex items-center justify-center">
+                <div className="relative w-full">
                   {/* Main illustration container */}
-                  <div className="relative w-full h-[500px]">
+                  <div className="relative w-full h-[550px] flex items-center justify-center">
                     {/* Background decorative shapes */}
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-yellow-400/20 to-orange-400/20 rounded-full blur-2xl"></div>
+                    <div className="absolute top-10 right-0 w-96 h-96 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-10 left-0 w-80 h-80 bg-gradient-to-tr from-yellow-400/20 to-orange-400/20 rounded-full blur-2xl"></div>
                     
                     {/* Illustration image */}
-                    <div className="relative z-10 flex items-center justify-center h-full">
+                    <div className="relative z-10 flex items-center justify-center">
                       <img 
                         src="/bg.png" 
                         alt="Digital Library Illustration" 
-                        className="w-full h-auto max-w-lg object-contain"
+                        className="w-full h-auto max-w-lg object-contain drop-shadow-2xl"
                       />
                     </div>
                   </div>
